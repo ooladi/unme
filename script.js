@@ -49,7 +49,12 @@ function showNextMessage(index) {
   } else if ( index == mensajes.length) {
     document.getElementById('message').style.whiteSpace = 'pre-line';
     document.getElementById('message').textContent = 'Mi Oladi hermosa preciosa, ¿Cómo estás? Espero que estés muy bien :). Quiero decirte que estar contigo un mes más me hace muy feliz. Me hace sentir muy emocionado de lo más cerca que estamos para poder estar juntos en nuestro hogar.\n\nTe amo demasiado, y te amaré el resto de mi existencia. Eres mi razón, mi inspiración. Eres lo que le faltaba a mi vida.\n\nDe los elementos esenciales para la vida; fuego, agua, tierra y aire, eres mi quinto elemento esencial para vivir.\n\nEstar contigo lo tengo todo.\nNo llegue a un punto en mi vida pensar que estaría tan feliz. No pensé que a alguien podría contarle lo que me sucede en la vida, ya que soy un poco reservado. Pero contigo puedo ver películas, series, jugar videojuegos, comentarte lo que me pasa, y sé que estarás ahí escuchándome. Contigo es diferente. Y todo lo que quiero es estar a tu lado abrazándote.\nEres mi lugar seguro Oladi c:\nTe amo un montón, mi cuhurrumin, mi totololoche, mi preciosura, mi amorcito, ME ENCANTAS.'
-    document.getElementById('message').style.fontSize = '1.3rem';
+    var anchoVentana = window.innerWidth;
+    if (anchoVentana >= 768) {
+      document.getElementById('message').style.fontSize = '1.3rem';
+    } else {
+      document.getElementById('message').style.fontSize = '0.8rem';
+    }
     fadeInMessage();
   }
 
